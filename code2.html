@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriVora - Smart Farming AI</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#36e27b",
+              "background-light": "#f6f8f7",
+              "background-dark": "#112117",
+              "surface-dark": "#1a2c22", 
+              "surface-border": "#254632",
+            },
+            fontFamily: {
+              "display": ["Spline Sans", "sans-serif"],
+              "body": ["Noto Sans", "sans-serif"],
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            keyframes: {
+                float: {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
+                }
+            },
+            animation: {
+                float: 'float 6s ease-in-out infinite',
+                'float-delayed': 'float 7s ease-in-out infinite 1s',
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased overflow-x-hidden min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-surface-border bg-background-dark/80 backdrop-blur-lg">
+<div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between">
+<!-- Logo Section -->
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-[24px]">eco</span>
+</div>
+<h2 class="text-white text-xl font-bold tracking-tight">AgriVora</h2>
+</div>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Features</a>
+<a class="text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="hidden md:flex min-w-[100px] h-11 items-center justify-center rounded-full bg-surface-dark border border-surface-border text-white text-sm font-bold hover:bg-surface-border transition-colors">
+                        Log In
+                    </button>
+<button class="flex md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<main class="flex-grow flex flex-col justify-center relative pt-8 pb-16 lg:py-20">
+<!-- Abstract Background Glow -->
+<div class="absolute top-0 right-0 -z-10 h-[600px] w-[600px] bg-primary/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/3 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 -z-10 h-[400px] w-[400px] bg-primary/5 blur-[100px] rounded-full -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+<div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+<!-- Left Column: Content -->
+<div class="flex flex-col gap-8 max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
+<!-- Feature Pill -->
+<div class="inline-flex items-center gap-2 self-center lg:self-start rounded-full bg-surface-dark border border-surface-border px-4 py-1.5 transition-transform hover:scale-105 cursor-default">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-xs font-bold text-primary tracking-wide uppercase">AI Soil Analysis Live</span>
+</div>
+<!-- Main Headlines -->
+<div class="space-y-6">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight text-white">
+                            Cultivating <span class="text-primary">Sri Lanka's Future</span> with AI Precision
+                        </h1>
+<h2 class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-lg mx-auto lg:mx-0">
+                            AgriVora combines real-time IoT soil data and advanced AI to recommend the perfect crops for your land. From home gardens to paddy fields.
+                        </h2>
+</div>
+<!-- Call to Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button class="flex h-12 md:h-14 px-8 items-center justify-center rounded-full bg-primary text-background-dark text-base font-bold tracking-wide hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(54,226,123,0.3)]">
+<span class="truncate">Start Your Harvest</span>
+<span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+</button>
+<button class="flex h-12 md:h-14 px-8 items-center justify-center rounded-full bg-transparent border border-surface-border text-white text-base font-bold hover:bg-surface-dark transition-all duration-300">
+<span class="material-symbols-outlined mr-2 text-[20px] text-primary">play_circle</span>
+<span class="truncate">Learn More</span>
+</button>
+</div>
+<!-- Trust Indicators (MetaText Integrated) -->
+<div class="pt-4 border-t border-surface-border/50 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5">
+<div class="flex -space-x-3">
+<img alt="Portrait of a smiling male farmer" class="inline-block h-10 w-10 rounded-full ring-2 ring-background-dark object-cover" data-alt="Portrait of a smiling male farmer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKpuELFka-Gpbq5-7DKTUFLNeQ5cg47UWxzvMpVobUUWEyj6OT1-QYQ_yaSQO2VdTX0opLMUummOAS5v505uRNMW2Xa31_Y2oRAmGzu9MuTiLmwJM_2_JF164jfo7-cEyikO4hYvjNMtFMbLI-JnawyHU5BuOchhkvB9fRK7F_vwbhhGFWsPg3ynFE1K5gAjEgMUhG9vbyx1Xn7bVqcSjRY88VYg4C4b_eF4ROuJOa2h3pL7VF1AEazFfnlpFLuV6IVnpiK2ierWH1"/>
+<img alt="Portrait of a female agriculturist" class="inline-block h-10 w-10 rounded-full ring-2 ring-background-dark object-cover" data-alt="Portrait of a female agriculturist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0jxI2prambmJOiZq7IrWe5cbqfUsxtIqSkWPEoanxzh-MOaQ-Y70_IAeknnarMGDvbOL17Q8N8KvnpQa3j0DC8tcYbjiD7LvNKrhA25q2cPFh4hcwIpEKcIBTb_T-_LiBQ408Ikj6cOSGprPnmYGN9opslPVngHXTItvyNmc-8PL4DFehTh876d7S5PqICcdA_q_UM0d0FBntvlXfjugL0SeXKBrbOrt41fpcdp-5_Rj_yQoQNdc6ipbUSvCHCOXTgYH76NU_fJ5J"/>
+<img alt="Portrait of a user" class="inline-block h-10 w-10 rounded-full ring-2 ring-background-dark object-cover" data-alt="Portrait of a user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLVfpeCt1pl9q78loNpa0Wvtv5iRVY-nGefmFzviccSlY46fYt_zPzFO-GOUUJ-KXMKUQuZ8EmA0uuLPSbHVUWPKHk89eAZBsB-fGr6VoPy4qQP1Ki8O3cyzzjSr1MdFlLMy-d4ImUy07swAvLtloIUiLvq2Gi_3G62K2bNQ3UmNQGO5xUqDNrrMFtAV297NxmA66B8wV7pdhxSdB9mM-YjZtbmGbCoaRqT2YGWvEhMiObVGr0ZgYHTSnIQlyKEwiY5sBl_hiWHmX9"/>
+<div class="flex items-center justify-center h-10 w-10 rounded-full ring-2 ring-background-dark bg-surface-dark text-xs font-bold text-white">
+                                +500
+                            </div>
+</div>
+<div class="text-center sm:text-left">
+<div class="flex items-center justify-center sm:justify-start gap-1 text-yellow-400 mb-1">
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+</div>
+<p class="text-[#95c6a9] text-sm font-normal">Trusted by Sri Lankan Farmers</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual -->
+<div class="relative w-full h-full min-h-[400px] lg:min-h-[600px] flex items-center justify-center">
+<!-- Main Hero Image Card -->
+<div class="relative w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] max-w-md lg:max-w-full mx-auto rounded-[2rem] overflow-hidden border border-surface-border shadow-2xl bg-surface-dark group">
+<img alt="A Sri Lankan farmer inspecting crops in a lush green tea plantation with sunlight filtering through" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" data-alt="A Sri Lankan farmer inspecting crops in a lush green tea plantation with sunlight filtering through" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyT_8VR-cZCVrW7ZGgD6vo_Djt6LgHT8HnsdcDBBK_jAPMhj-VmP05daDeOJqToOEMFSw5KEjV4rYLRdfZeDgImL5YofDm6kRIMgagYvk5IoDqD9P8G_YJ4p9UKW6w1rfeFCMd5jUCYVpSzZSBC9EZoyEeIC5KqBXmjwT4Y-kZR-7ICFeblC5c16JEVum4E3-TUMCKDJQ1z24EL5PeZ9e0X_S7QI8aFiV0AV4oT1qDGwYnBpzID2GfMlTCTzR9x6v6LfxWPQLG4P_"/>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80"></div>
+<!-- Data Overlay: Scan Lines -->
+<div class="absolute inset-0 bg-[linear-gradient(rgba(18,33,24,0)_50%,rgba(54,226,123,0.05)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-10 bg-[length:100%_4px,6px_100%] pointer-events-none"></div>
+<!-- Floating UI Card 1: Crop ID (Top Left) -->
+<div class="absolute top-6 left-6 right-6 sm:right-auto sm:w-64 bg-background-dark/90 backdrop-blur-md border border-surface-border p-4 rounded-xl shadow-lg animate-float z-20">
+<div class="flex items-start gap-3">
+<div class="size-10 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">psychiatry</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1">Recommended Crop</p>
+<p class="text-white font-bold text-lg leading-none">Keeri Samba</p>
+<p class="text-primary text-xs mt-1 font-medium">98% Match for Soil Type</p>
+</div>
+</div>
+</div>
+<!-- Floating UI Card 2: IoT Stats (Bottom Right) -->
+<div class="absolute bottom-8 right-6 left-6 sm:left-auto sm:w-64 bg-background-dark/90 backdrop-blur-md border border-surface-border p-4 rounded-xl shadow-lg animate-float-delayed z-20">
+<div class="flex justify-between items-end mb-2">
+<p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Soil Moisture</p>
+<span class="material-symbols-outlined text-blue-400 text-sm">water_drop</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-bold text-white">85%</span>
+<span class="text-xs text-primary font-medium">Optimal</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-border h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-blue-500 h-full rounded-full w-[85%]"></div>
+</div>
+</div>
+</div>
+<!-- Decorative Background Elements behind the image -->
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[90%] border border-surface-border rounded-[2.5rem] opacity-30 rotate-3"></div>
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[90%] border border-surface-border rounded-[2.5rem] opacity-20 -rotate-2"></div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

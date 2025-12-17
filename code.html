@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriVora - Modern Farming Solutions</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#36e27b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                        "surface-dark": "#1b3224",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #112117; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #254632; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #36e27b; 
+        }
+        
+        /* Smooth fade for elements */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-b-[#254632] bg-[#122118]/80 backdrop-blur-md px-6 py-4">
+<div class="mx-auto flex max-w-[1280px] items-center justify-between">
+<div class="flex items-center gap-3 text-white">
+<div class="flex items-center justify-center size-8 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-[24px]">agriculture</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">AgriVora</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Home</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Features</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">About Us</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Contact</a>
+</nav>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-[#122118] text-sm font-bold hover:bg-white transition-colors duration-300">
+<span class="truncate">Get Started</span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center w-full">
+<!-- Hero / Intro Section -->
+<section class="w-full px-6 py-16 flex justify-center bg-[url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center relative" data-alt="Dark green abstract pattern resembling stylized agricultural fields or leaf textures">
+<div class="absolute inset-0 bg-[#112117]/90"></div>
+<div class="relative z-10 layout-content-container flex flex-col max-w-[960px] w-full text-center">
+<div class="mb-4 inline-flex items-center justify-center gap-2 self-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">temp_preferences_custom</span>
+<span class="text-sm font-medium text-primary">Sri Lanka's First AI Agronomist</span>
+</div>
+<h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-[-0.015em] mb-6">
+                    Why AgriVora? <br/>
+<span class="text-primary">Bridging the Gap</span> in Modern Agriculture
+                </h1>
+<p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+                    Farming in Sri Lanka is changing. We are moving away from traditional uncertainty towards a future powered by data, precision, and intelligence.
+                </p>
+</div>
+</section>
+<!-- Problem Section (The Struggle) -->
+<section class="w-full px-6 py-20 flex justify-center bg-[#16291f] border-b border-[#254632]">
+<div class="layout-content-container flex flex-col max-w-[1080px] w-full">
+<div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+<!-- Content Left -->
+<div class="flex flex-col gap-6 lg:w-1/3 lg:sticky lg:top-32">
+<div class="flex items-center gap-3 text-red-400/80 mb-2">
+<span class="material-symbols-outlined">warning</span>
+<span class="text-sm font-bold uppercase tracking-wider">The Challenge</span>
+</div>
+<h2 class="text-white text-3xl md:text-4xl font-bold leading-tight">
+                            The Struggle of <br/><span class="text-gray-400">Traditional Farming</span>
+</h2>
+<p class="text-gray-400 text-base leading-relaxed">
+                            Sri Lankan farmers face mounting challenges in a rapidly changing climate. Relying on intuition alone is no longer enough to secure a profitable harvest.
+                        </p>
+</div>
+<!-- Cards Right -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 lg:w-2/3 w-full">
+<!-- Card 1 -->
+<div class="group flex flex-col sm:flex-row gap-5 rounded-xl border border-gray-700/50 bg-[#122118] p-6 transition-all hover:border-red-400/30">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-800 text-gray-400 group-hover:text-red-400 group-hover:bg-red-400/10 transition-colors">
+<span class="material-symbols-outlined text-[28px]">thunderstorm</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Unpredictable Weather</h3>
+<p class="text-gray-500 text-sm leading-relaxed">
+                                    Monsoon patterns are shifting. Historical knowledge can't predict today's erratic rainfall, leading to devastating crop losses.
+                                </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col sm:flex-row gap-5 rounded-xl border border-gray-700/50 bg-[#122118] p-6 transition-all hover:border-red-400/30">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-800 text-gray-400 group-hover:text-red-400 group-hover:bg-red-400/10 transition-colors">
+<span class="material-symbols-outlined text-[28px]">water_drop</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Resource Wastage</h3>
+<p class="text-gray-500 text-sm leading-relaxed">
+                                    Over-watering and inefficient fertilizer application drain profits and damage soil health, increasing costs for small-holder farmers.
+                                </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col sm:flex-row gap-5 rounded-xl border border-gray-700/50 bg-[#122118] p-6 transition-all hover:border-red-400/30">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-800 text-gray-400 group-hover:text-red-400 group-hover:bg-red-400/10 transition-colors">
+<span class="material-symbols-outlined text-[28px]">help_center</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Knowledge Gap</h3>
+<p class="text-gray-500 text-sm leading-relaxed">
+                                    Expert agronomy advice is often inaccessible in remote areas, leaving students and home gardeners guessing about pest control and care.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Solution Section (The AgriVora Way) -->
+<section class="w-full px-6 py-24 flex justify-center bg-background-dark relative overflow-hidden">
+<!-- Decorative Glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="layout-content-container flex flex-col max-w-[1080px] w-full z-10">
+<div class="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-start">
+<!-- Content Right -->
+<div class="flex flex-col gap-6 lg:w-1/3 lg:sticky lg:top-32">
+<div class="flex items-center gap-3 text-primary mb-2">
+<span class="material-symbols-outlined">verified</span>
+<span class="text-sm font-bold uppercase tracking-wider">The Solution</span>
+</div>
+<h2 class="text-white text-3xl md:text-4xl font-bold leading-tight">
+                            The <span class="text-primary">AgriVora Way</span><br/> Farming with Intelligence
+                        </h2>
+<p class="text-gray-400 text-base leading-relaxed mb-4">
+                            We empower you with data-driven precision. Whether you manage acres of paddy or a rooftop garden, AgriVora turns uncertainty into guaranteed growth.
+                        </p>
+<button class="flex w-fit cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full h-12 px-6 bg-primary hover:bg-[#2bc768] text-[#122118] text-base font-bold transition-all shadow-[0_0_20px_rgba(54,226,123,0.4)] hover:shadow-[0_0_30px_rgba(54,226,123,0.6)]">
+<span>Start Growing Smarter</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+<!-- Cards Left -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 lg:w-2/3 w-full">
+<!-- Card 1 -->
+<div class="group flex flex-col sm:flex-row gap-5 rounded-xl border border-[#366348]/50 bg-[#1b3224]/50 p-6 backdrop-blur-sm transition-all hover:border-primary hover:bg-[#1b3224] hover:shadow-[0_4px_24px_rgba(0,0,0,0.2)]">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-[28px]">psychology</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">AI Precision Engine</h3>
+<p class="text-[#95c6a9] text-sm leading-relaxed">
+                                    Our AI analyzes real-time weather data to recommend the perfect planting windows, minimizing risk and maximizing yield potential.
+                                </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col sm:flex-row gap-5 rounded-xl border border-[#366348]/50 bg-[#1b3224]/50 p-6 backdrop-blur-sm transition-all hover:border-primary hover:bg-[#1b3224] hover:shadow-[0_4px_24px_rgba(0,0,0,0.2)]">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-[28px]">sensors</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">IoT Soil Monitoring</h3>
+<p class="text-[#95c6a9] text-sm leading-relaxed">
+                                    Smart sensors speak directly to the app, telling you exactly what your soil needs—be it water or nutrients—right when it needs it.
+                                </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col sm:flex-row gap-5 rounded-xl border border-[#366348]/50 bg-[#1b3224]/50 p-6 backdrop-blur-sm transition-all hover:border-primary hover:bg-[#1b3224] hover:shadow-[0_4px_24px_rgba(0,0,0,0.2)]">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-[28px]">potted_plant</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Expert Empowerment</h3>
+<p class="text-[#95c6a9] text-sm leading-relaxed">
+                                    Get expert-level crop recommendations in your pocket. From pest identification to harvest timing, you are never farming alone.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#254632] bg-[#122118] px-10 py-12">
+<div class="layout-content-container mx-auto flex max-w-[960px] flex-col gap-8">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-3 text-white">
+<div class="flex items-center justify-center size-8 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-[20px]">agriculture</span>
+</div>
+<span class="text-lg font-bold">AgriVora</span>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-8">
+<a class="text-[#95c6a9] hover:text-primary transition-colors text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-[#95c6a9] hover:text-primary transition-colors text-sm font-medium" href="#">Terms of Service</a>
+<a class="text-[#95c6a9] hover:text-primary transition-colors text-sm font-medium" href="#">Support</a>
+</div>
+</div>
+<div class="h-px w-full bg-[#254632]"></div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+<p class="text-[#5c7a68] text-sm">© 2024 AgriVora. Empowering Sri Lankan Agriculture.</p>
+<div class="flex gap-4">
+<!-- Social Placeholders -->
+<a class="text-[#5c7a68] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a>
+<a class="text-[#5c7a68] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">mail</span></a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
